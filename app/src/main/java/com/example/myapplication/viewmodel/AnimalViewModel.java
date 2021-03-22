@@ -19,7 +19,7 @@ import java.util.Objects;
 
 public class AnimalViewModel extends AndroidViewModel {
     private static PreferencesManager preferencesManager;
-    private MutableLiveData<Animal> data = new MutableLiveData<Animal>();
+    private MutableLiveData<Animal> data;
 
     public AnimalViewModel(Application application) {
         super(application);
@@ -28,6 +28,7 @@ public class AnimalViewModel extends AndroidViewModel {
         }
     }
         public MutableLiveData<Animal> getAnimal(){
+           data  = new MutableLiveData<Animal>();
             data.setValue(preferencesManager.getAnimal());
             return data;
         }
