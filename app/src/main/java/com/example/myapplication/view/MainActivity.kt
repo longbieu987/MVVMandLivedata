@@ -33,9 +33,6 @@ class MainActivity : AppCompatActivity() {
         })
        activityMainBinding.btnChange.setOnClickListener {
             viewModel.saveAnimal(Animal(activityMainBinding.inputAnimal.text.toString()))
-            activityMainBinding.btnChange.setOnClickListener {
-                viewModel.saveAnimal(Animal(activityMainBinding.inputAnimal.text.toString()))
-            }
         }
     }
 }
